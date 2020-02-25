@@ -14,7 +14,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Tarea01</RootNamespace>
     <AssemblyName>Tarea01</AssemblyName>
-    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <MvcBuildViews>false</MvcBuildViews>
     <UseIISExpress>true</UseIISExpress>
     <Use64BitIISExpress />
@@ -25,6 +25,7 @@
     <UseGlobalApplicationHostFile />
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -54,17 +55,15 @@
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.IO.Compression" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
-    <Reference Include="System.Core" />
-    <Reference Include="System.Data.DataSetExtensions" />
-    <Reference Include="System.Xml.Linq" />
-    <Reference Include="System.Web" />
     <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web" />
     <Reference Include="System.Web.Abstractions" />
     <Reference Include="System.Web.Routing" />
     <Reference Include="System.Xml" />
@@ -109,6 +108,7 @@
     <Reference Include="Newtonsoft.Json">
       <HintPath>..\packages\Newtonsoft.Json.11.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
+    <Reference Include="System.Xml.Linq" />
     <Reference Include="WebGrease">
       <Private>True</Private>
       <HintPath>..\packages\WebGrease.1.6.0\lib\WebGrease.dll</HintPath>
@@ -191,6 +191,7 @@
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\Persona.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
@@ -200,12 +201,31 @@
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\main.css" />
+    <Content Include="conversor.jpg" />
+    <Content Include="curri.jpg" />
+    <Content Include="elnacional.jpg" />
+    <Content Include="elnuevodiario.jpg" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="interazm.png" />
+    <Content Include="interbbc.jpg" />
+    <Content Include="intercnn.jpg" />
+    <Content Include="interfoxnew.jpg" />
+    <Content Include="intertelemundo.jpg" />
+    <Content Include="itunes.jpg" />
+    <Content Include="juancho.jpeg" />
+    <Content Include="mifoto2.jpg" />
+    <Content Include="musica1.jpg" />
+    <Content Include="noticdn.jpg" />
+    <Content Include="Noticias1.jpg" />
+    <Content Include="notiSIN.jpg" />
+    <Content Include="pelicula.jpg" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="xlslogo.jpg" />
+    <Content Include="youtube.png" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
     <Content Include="Scripts\jquery-3.3.1.min.js" />
@@ -221,6 +241,8 @@
     <Content Include="Scripts\modules\Calculadora.js" />
     <Content Include="Scripts\modules\Controller.js" />
     <Content Include="Scripts\modules\Formula.js" />
+    <Content Include="spotify.jpg" />
+    <Content Include="telenoticiasrd.jpg" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -257,10 +279,17 @@
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Juancho\Conversor.cshtml" />
     <Content Include="Views\Juancho\CargaExcel.cshtml" />
+    <Content Include="Views\Ley\OpcionesGenerales.cshtml" />
+    <Content Include="Views\Ley\Formulario.cshtml" />
+    <Content Include="Views\Ley\ResultFormulario.cshtml" />
+    <Content Include="Views\Ley\Noticias.cshtml" />
+    <Content Include="Views\Ley\Musica.cshtml" />
+    <Content Include="Views\Ley\Peliculas.cshtml" />
+    <Content Include="Views\Ley\AcercaDe.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\Ley\" />
+    <Folder Include="Fotoss\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />

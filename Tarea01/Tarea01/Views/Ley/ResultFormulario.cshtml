@@ -1,0 +1,37 @@
+﻿@model Tarea01.Models.Persona
+@{
+    ViewBag.Title = "ResultFormulario";
+}
+
+
+<h2>Resultado Formulario</h2>
+
+<br />
+
+<h4>@Model.Cedula</h4>
+<h4>@Model.Nombre</h4>
+<h4>@Model.Apellido</h4>
+<h4>@Model.Edad</h4>
+<h4>@Model.Telefono</h4>
+<h4>@Model.CorreoElectronico</h4>
+<h4>@Model.Puesto</h4>
+<h4>@Model.Genero</h4>
+
+
+@foreach (string file in ViewBag.Files)
+{
+    if (file.ToLower().Contains("pdf"))
+    {
+        <br />
+        <div>
+            <br />
+            @Html.ActionLink("Descargar CV", "DownloadCV", "Ley", new { route = file }, null)
+        </div>
+        //<iframe src="@file"></iframe> EN CASO DE QUERER MOSTRAR UN PREVIEW
+    }
+    else
+    {
+        <img src="@file" width="300" height="300" /><br />
+    }
+
+}

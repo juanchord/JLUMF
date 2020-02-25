@@ -1,0 +1,254 @@
+﻿@model Tarea01.Models.Persona
+@using Tarea01.Models
+
+@{
+    /**/
+
+    ViewBag.Title = "Formulario";
+}
+
+<h2>Formulario</h2>
+<br />
+<br />
+@using (Html.BeginForm("Formulario", "Ley", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+
+    @*<div>
+            @Html.LabelFor(z => z.Cedula)
+            @Html.TextBoxFor(a => a.Cedula, new { @class = "form-control", placeholder = "Inserte su cédula" })
+            @Html.ValidationMessageFor(a => a.Cedula, "", new { @class = "text-danger" })
+        </div>*@
+
+
+
+
+    <div class="row album py-5 bg-light">
+        <div class="container">
+
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card mb-4 shadow-sm">
+                        <div class="card-body">
+                            @Html.LabelFor(z => z.Cedula)
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="btn-group">
+                                    @Html.TextBoxFor(a => a.Cedula, new { @class = "form-control", placeholder = "Inserte su cédula" })
+                                    @Html.ValidationMessageFor(a => a.Cedula, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card mb-4 shadow-sm">
+                        <div class="card-body">
+                            @Html.LabelFor(z => z.Nombre)
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="btn-group">
+                                    @Html.TextBoxFor(a => a.Nombre, new { @class = "form-control", placeholder = "Inserte su nombre" })
+                                    @Html.ValidationMessageFor(a => a.Nombre, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card mb-4 shadow-sm">
+                        <div class="card-body">
+                            @Html.LabelFor(z => z.Apellido)
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="btn-group">
+                                    @Html.TextBoxFor(a => a.Apellido, new { @class = "form-control", placeholder = "Inserte su apellido" })
+                                    @Html.ValidationMessageFor(a => a.Apellido, "", new { @class = "text-danger" })
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    @*<div class="row">
+            &nbsp &nbsp &nbsp
+            <div>
+                @Html.LabelFor(z => z.Nombre)
+                @Html.TextBoxFor(a => a.Nombre, new { @class = "form-control", placeholder = "Inserte su nombre" })
+                @Html.ValidationMessageFor(a => a.Nombre, "", new { @class = "text-danger" })
+            </div>
+            &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+
+            <div>
+                @Html.LabelFor(z => z.Apellido)
+                @Html.TextBoxFor(a => a.Apellido, new { @class = "form-control", placeholder = "Inserte su apellido" })
+                @Html.ValidationMessageFor(a => a.Apellido, "", new { @class = "text-danger" })
+            </div>
+        </div>*@
+
+
+
+
+    <div class="row album py-5 bg-light">
+        <div class="container">
+
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card mb-4 shadow-sm">
+                        <div class="card-body">
+                            @Html.LabelFor(z => z.Edad)
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="btn-group">
+                                    @Html.TextBoxFor(a => a.Edad, new { @class = "form-control", placeholder = "Inserte su edad" })
+                                    @Html.ValidationMessageFor(a => a.Edad, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card mb-4 shadow-sm">
+                        <div class="card-body">
+                            @Html.LabelFor(z => z.Telefono)
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="btn-group">
+                                    @Html.TextBoxFor(a => a.Telefono, new { @class = "form-control", placeholder = "Inserte su telefono" })
+                                    @Html.ValidationMessageFor(a => a.Telefono, "", new { @class = "text-danger" })
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card mb-4 shadow-sm">
+                        <div class="card-body">
+                            @Html.LabelFor(z => z.CorreoElectronico)
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="btn-group">
+                                    @Html.TextBoxFor(a => a.CorreoElectronico, new { @class = "form-control", placeholder = "Inserte su correo electronico" })
+                                    @Html.ValidationMessageFor(a => a.CorreoElectronico, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    @*<div>
+            @Html.LabelFor(z => z.Edad)
+            @Html.TextBoxFor(a => a.Edad, new { @class = "form-control", placeholder = "Inserte su edad" })
+            @Html.ValidationMessageFor(a => a.Edad, "", new { @class = "text-danger" })
+        </div>
+
+
+        <div>
+            @Html.LabelFor(z => z.Telefono)
+            @Html.TextBoxFor(a => a.Telefono, new { @class = "form-control", placeholder = "Inserte su telefono" })
+            @Html.ValidationMessageFor(a => a.Telefono, "", new { @class = "text-danger" })
+        </div>*@
+
+
+
+
+
+
+    @*<div>
+            @Html.LabelFor(z => z.CorreoElectronico)
+            @Html.TextBoxFor(a => a.CorreoElectronico, new { @class = "form-control", placeholder = "Inserte su correo electronico" })
+            @Html.ValidationMessageFor(a => a.CorreoElectronico, "", new { @class = "text-danger" })
+        </div>*@
+
+    <br></br>
+
+    <div>
+        &nbsp &nbsp &nbsp  &nbsp &nbsp &nbsp  &nbsp &nbsp &nbsp  &nbsp &nbsp &nbsp  &nbsp &nbsp &nbsp  &nbsp &nbsp &nbsp  &nbsp
+        @Html.LabelFor(z => z.Puesto)
+        @Html.DropDownListFor(p => p.Puesto, new SelectList(Enum.GetValues(typeof(Puestoo))), "Indique el puesto que desea")
+    </div>
+
+    <br></br>
+
+    <div class="row">
+        &nbsp &nbsp &nbsp  &nbsp &nbsp &nbsp  &nbsp &nbsp &nbsp  &nbsp &nbsp &nbsp  &nbsp &nbsp &nbsp  &nbsp &nbsp &nbsp  &nbsp &nbsp &nbsp  &nbsp
+        @Html.Label("Genero: ") &nbsp &nbsp
+        <div>
+            @Html.RadioButtonFor(a => a.Genero, "Femenino")
+            @Html.Label("Femenino") &nbsp &nbsp &nbsp
+        </div> &nbsp &nbsp &nbsp
+        <div>
+            @Html.RadioButtonFor(b => b.Genero, "Masculino")
+            @Html.Label("Masculino")
+        </div>
+    </div>
+
+
+    @*<div class="row">
+            &nbsp &nbsp &nbsp
+            <h3>Seleccione una foto </h3> &nbsp &nbsp &nbsp &nbsp
+            <input type="file" value="imagen" name="Files" />
+        </div>
+
+        <br />
+        <div class="row">
+            &nbsp &nbsp &nbsp
+            <h3>Seleccione un PDF</h3> &nbsp &nbsp &nbsp &nbsp
+            <input type="file" value="CV" name="Files" />
+        </div>*@
+
+
+
+
+    <div class="row album py-5 bg-light">
+        <div class="container">
+
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card mb-4 shadow-sm">
+                        <div class="card-body">
+                            <h4>Seleccione una foto</h4>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="btn-group">
+                                    <input type="file" value="imagen" name="Files" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card mb-4 shadow-sm">
+                        <div class="card-body">
+                            <h4>Seleccione un PDF</h4>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="btn-group">
+                                    <input type="file" value="CV" name="Files" />
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div>
+        &nbsp &nbsp &nbsp  &nbsp &nbsp &nbsp  &nbsp &nbsp &nbsp  &nbsp &nbsp &nbsp  &nbsp &nbsp &nbsp  &nbsp &nbsp &nbsp  &nbsp
+        &nbsp &nbsp &nbsp  &nbsp &nbsp &nbsp  &nbsp &nbsp &nbsp  &nbsp &nbsp &nbsp  &nbsp &nbsp &nbsp  &nbsp &nbsp &nbsp  &nbsp
+        &nbsp &nbsp &nbsp  &nbsp &nbsp &nbsp  &nbsp &nbsp &nbsp  &nbsp &nbsp &nbsp  &nbsp &nbsp &nbsp  &nbsp &nbsp &nbsp  &nbsp
+        &nbsp &nbsp &nbsp  &nbsp &nbsp &nbsp  &nbsp &nbsp &nbsp  &nbsp &nbsp &nbsp  &nbsp &nbsp &nbsp  &nbsp &nbsp &nbsp  &nbsp
+
+        <input type="submit" value="ENVIAR" class="btn-success" />
+    </div>
+
+
+}
+
+
+
