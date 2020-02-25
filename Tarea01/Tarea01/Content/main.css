@@ -1,0 +1,25 @@
+﻿
+.conversor {
+    max-width: 1200px;
+    height: 500px;
+    margin: 30px auto;
+    border:1px solid grey;
+}
+
+    .center{
+        padding-top:70px;
+        margin:auto;
+        width:100%;
+        height:100%;
+        text-align:center;
+
+    }
+.conversor .row  input{
+    display:inline-block;
+    height:250px;
+    padding:20px;
+    margin:20px 0;
+    font-size:23px;
+
+  
+}
