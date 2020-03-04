@@ -18,10 +18,35 @@ namespace Tarea01.Controllers
         {
             return View();
         }
-
-        public ActionResult ResultFormulario()
+        [HttpPost]
+        public ActionResult Formulario(Persona estudi, HttpPostedFileBase[] Files)
         {
-            return View();
+            if (ModelState.IsValid)
+            {
+                List<string> routes = new List<string>();
+                foreach (HttpPostedFileBase img in Files)
+                {
+                    string nombreFoto = img.FileName;
+                    routes.Add("/Fotoss/" + nombreFoto);
+                    img.SaveAs(Server.MapPath(routes.Last()));
+                }
+
+
+                ViewBag.Files = routes;
+
+                return View("ResultFormulario", estudi);
+            }
+            else
+            {
+                return View("Formulario");
+            }
+        }
+
+
+        public ActionResult ResultFormulario(Persona estudi)
+        {
+            return View(estudi);
+
         }
 
         public ActionResult Noticias()
@@ -40,6 +65,10 @@ namespace Tarea01.Controllers
         public ActionResult AcercaDe()
         {
             return View();
+        }
+        public ActionResult DownloadCV(string route)
+        {
+            return File(route, MimeMapping.GetMimeMapping(route));
         }
     }
 }
